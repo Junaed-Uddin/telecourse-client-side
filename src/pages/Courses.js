@@ -5,7 +5,7 @@ const Courses = () => {
     const courses = useLoaderData();
     console.log(courses);
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center items-center'>
             <h2>This is Courses</h2>
         </div>
     );
