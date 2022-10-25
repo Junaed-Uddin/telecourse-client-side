@@ -2,10 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Blog from "../pages/Blog";
 import Courses from "../pages/Courses";
+import Categories from "../pages/Categories";
 import Faq from "../pages/Faq";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import SingleCourse from "../pages/SingleCourse";
 
 export const router = createBrowserRouter([
     {
@@ -23,9 +25,23 @@ export const router = createBrowserRouter([
             {
                 path: 'courses',
                 loader: () => {
-                    return fetch(`https://telecourse-server.vercel.app/categories`);
+                    return fetch(`https://telecourse-server.vercel.app/courses`);
                 },
                 element: <Courses></Courses>
+            },
+            {
+                path: '/category/:id',
+                loader: ({params}) => {
+                    return fetch(`https://telecourse-server.vercel.app/category/${params.id}`);
+                },
+                element: <Categories></Categories>
+            },
+            {
+                path: '/course/:id',
+                loader: ({params}) => {
+                    return fetch(`https://telecourse-server.vercel.app/course/${params.id}`);
+                },
+                element: <SingleCourse></SingleCourse>
             },
             {
                 path: 'blog',

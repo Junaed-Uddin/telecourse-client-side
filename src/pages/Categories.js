@@ -3,17 +3,16 @@ import { useLoaderData } from 'react-router-dom';
 import CoursesDetails from './CoursesDetails';
 import LeftNavbar from './LeftNavbar';
 
-const Courses = () => {
-    const courses = useLoaderData();
-
+const Categories = () => {
+    const coursesDetails = useLoaderData();
     return (
         <div className='mt-10 flex flex-wrap sm:flex-nowrap justify-evenly'>
             <LeftNavbar></LeftNavbar>
-            <div className='grid lg:grid-cols-3 w-full md:grid-cols-2 sm:grid-cols-1 gap-5 sm:w-3/4 sm:mx-3 lg:mx-0 lg:mr-2'>
+            <div className='grid lg:grid-cols-3 w-full md:grid-cols-2 sm:grid-cols-1 gap-5 mx-2 sm:w-3/4 sm:mx-3 lg:mx-0 lg:mr-2'>
                 {
-                    courses.map(cs =><CoursesDetails
-                        key={cs.course_id}
-                        allCourse={cs}
+                    coursesDetails.map((cd, index) => <CoursesDetails
+                        key={index}
+                        allCourse={cd}
                     ></CoursesDetails>)
                 }
             </div>
@@ -21,4 +20,4 @@ const Courses = () => {
     );
 };
 
-export default Courses;
+export default Categories;

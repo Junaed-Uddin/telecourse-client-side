@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className="bg-gray-800">
+        <div className="bg-gray-800 z-20">
             <div className="px-4 text-white mx-auto sm:max-w-xl md:max-w-full  md:px-24 lg:px-8">
                 <div className="relative flex items-center justify-between">
                     <div className="flex items-center">
@@ -64,7 +64,7 @@ const Header = () => {
                             </button>
                         </li>
                     </ul>
-                    <div className="md:hidden text-black text-start">
+                    <div className="md:hidden text-black text-start z-20">
                         <button
                             aria-label="Open Menu"
                             title="Open Menu"
@@ -154,7 +154,7 @@ const Header = () => {
                                             <li>
                                                 <NavLink
                                                     to="/"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white rounded shadow-md bg-deep-purple-accent-400"
+                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 rounded shadow-md bg-amber-400"
                                                 >
                                                     Toggle
                                                 </NavLink>
