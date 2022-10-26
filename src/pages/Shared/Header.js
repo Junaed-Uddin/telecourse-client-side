@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
         <div className={`z-20 shadow-md ${isSelected ? 'bg-gray-900' : 'bg-gray-200'}`}>
-            <div className={`px-4 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 ${isSelected ? 'text-gray-100' : 'text-gray-800'}`}>
+            <div className={`px-4 py-2 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 ${isSelected ? 'text-gray-100' : 'text-gray-800'}`}>
                 <div className="relative flex items-center justify-between">
                     <div className="flex items-center">
                         <Link
@@ -72,7 +72,7 @@ const Header = () => {
                             user?.uid ?
                                 <>
                                     <li className='flex gap-3'>
-                                        <NavLink to='/profileUpdate'>
+                                        <NavLink to='/ProfileUpdate'>
                                             <Tooltip content={user?.displayName ? user?.displayName : "Anonymous"}>
                                                 <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
                                             </Tooltip>
@@ -97,16 +97,16 @@ const Header = () => {
                                 </>
                         }
 
-                        <div className='flex items-center gap-2'>
-                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-14 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-white rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
-                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-6' : ''}`}></span>
+                        <li className='flex items-center gap-2'>
+                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-16 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
+                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-8' : ''}`}></span>
                             </div>
                             <span className='w-10'>
                                 {
                                     isSelected ? <span>Dark</span> : <span>Light</span>
                                 }
                             </span>
-                        </div>
+                        </li>
                     </ul>
                     <div className="lg:hidden text-black text-start z-20">
                         <button
@@ -216,9 +216,9 @@ const Header = () => {
                                                         </>
                                                 }
                                             </li>
-                                            <div className='flex justify-center pt-2 pb-4 items-center gap-2'>
-                                                <div onClick={() => setIsSelected(!isSelected)} className={`flex w-14 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-white rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
-                                                    <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-6' : ''}`}></span>
+                                            <div className='flex sm:justify-start justify-center pt-2 pb-4 items-center gap-2'>
+                                                <div onClick={() => setIsSelected(!isSelected)} className={`flex w-16 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
+                                                    <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-8' : ''}`}></span>
                                                 </div>
                                                 <span className='w-10'>
                                                     {

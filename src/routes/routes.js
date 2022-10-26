@@ -70,8 +70,8 @@ export const router = createBrowserRouter([
                 element: <ForgotPassword></ForgotPassword>
             },
             {
-                path: 'profileUpdate',
-                element: <ProfileUpdate></ProfileUpdate>
+                path: 'ProfileUpdate',
+                element: <PrivateRouter><ProfileUpdate></ProfileUpdate></PrivateRouter>
             },
             {
                 path: '/checkout/:id',
