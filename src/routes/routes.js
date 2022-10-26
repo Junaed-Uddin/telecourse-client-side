@@ -8,6 +8,9 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SingleCourse from "../pages/SingleCourse";
+import Checkout from "../pages/Checkout";
+import ForgotPassword from "../pages/ForgotPassword";
+import PrivateRouter from "./PrivateRouter";
 
 export const router = createBrowserRouter([
     {
@@ -31,14 +34,14 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                loader: ({params}) => {
+                loader: ({ params }) => {
                     return fetch(`https://telecourse-server.vercel.app/category/${params.id}`);
                 },
                 element: <Categories></Categories>
             },
             {
                 path: '/course/:id',
-                loader: ({params}) => {
+                loader: ({ params }) => {
                     return fetch(`https://telecourse-server.vercel.app/course/${params.id}`);
                 },
                 element: <SingleCourse></SingleCourse>
@@ -58,6 +61,17 @@ export const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+            {
+                path: 'forgotPassword',
+                element: <ForgotPassword></ForgotPassword>
+            },
+            {
+                path: '/checkout/:id',
+                loader: ({ params }) => {
+                    return fetch(`https://telecourse-server.vercel.app/course/${params.id}`);
+                },
+                element: <PrivateRouter><Checkout></Checkout></PrivateRouter> 
             },
         ]
     }

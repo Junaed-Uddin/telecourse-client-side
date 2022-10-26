@@ -4,6 +4,7 @@ import { FaRegClock, FaStar } from 'react-icons/fa'
 
 const CoursesDetails = ({ allCourse }) => {
     const { course_id, course_name, category, description, rating, duration, thumbnail, state, lectures } = allCourse;
+
     return (
         <div className="w-full">
             <div className="space-y-2 border w-full rounded-md shadow-xl mt-5 sm:mt-0 h-full">

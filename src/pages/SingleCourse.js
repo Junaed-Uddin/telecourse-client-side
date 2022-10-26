@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FaBookReader, FaCertificate, FaClock, FaFileContract, FaIdBadge, FaLanguage, FaLevelUpAlt, FaLock, FaMoneyBill, FaQuestion, FaRegFilePdf, FaStar, } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 
@@ -6,11 +6,18 @@ const SingleCourse = () => {
     const course = useLoaderData();
     const { course_id, course_name, category, instructor, description, rating, duration, state, lectures, enrolled, quizzes, assessments, certificate, languages, level, photo } = course;
 
+    const topContainer = useRef();
+
+    useEffect(() => {
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
+
     return (
         <div className='w-full'>
+            <div ref={topContainer} />
             <section className="mt-10 dark:text-gray-900">
                 <div className='flex flex-col-reverse w-3/4 mx-auto sm:flex-row justify-between items-center'>
-                    <h2 className='text-4xl text-start font-semibold mb-8'>{course_name}</h2>
+                    <h2 className='text-4xl text-amber-400 text-start font-semibold mb-8'>{course_name}</h2>
                     <div className='flex items-center gap-2 mb-8'>
                         <FaRegFilePdf size={30}></FaRegFilePdf>
                         <span>Get the PDF</span>
@@ -18,7 +25,7 @@ const SingleCourse = () => {
                 </div>
                 <div className="container px-3 sm:px-0 gap-5 md:flex justify-center mx-auto">
                     <div className="container flex flex-col sm:max-w-4xl shadow-2xl rounded-md divide-gray-700 dark:bg-black dark:text-gray-200">
-                        <div className="px-5 py-3">
+                        <div className="px-5 py-3 border border-gray-400">
                             <div className="flex justify-between flex-col sm:flex-row items-center w-full space-x-4 sm:divide-x divide-slate-400/25">
                                 <div className='flex py-3'>
                                     <div>
@@ -112,7 +119,7 @@ const SingleCourse = () => {
                 </div>
             </section>
 
-            <div className='md:flex justify-center gap-5 pl-4 my-10 px-2'>
+            <div className='sm:flex justify-center gap-5 pl-4 my-10 px-2'>
                 <section className="container dark:bg-gray-800 sm:max-w-4xl p-10 dark:text-gray-300 rounded-md">
                     <p className='my-4 text-3xl text-amber-400 font-semibold'>Course Description</p>
                     <div className='text-lg text-gray-200'>
@@ -154,9 +161,8 @@ const SingleCourse = () => {
                 </div>
             </div>
             <div className='flex justify-center items-center mb-10'>
-                <Link to='/'>
+                <Link to={`/checkout/${course_id}`}>
                     <button className='px-5 py-2 rounded-md font-bold bg-amber-400 flex items-center gap-2'><FaLock></FaLock><span>Get Premium Access</span></button>
-
                 </Link>
             </div>
         </div>
