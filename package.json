@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@anatoliygatt/dark-mode-toggle": "^1.0.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@material-tailwind/react": "^1.2.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,6 +17,8 @@
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "react-switch": "^7.0.0",
+    "react-toggle-button": "^2.2.0",
     "react-tooltip": "^4.4.3",
     "sweetalert2": "^11.6.2",
     "tw-elements": "^1.0.0-alpha12",
