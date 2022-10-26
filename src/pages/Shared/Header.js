@@ -6,6 +6,7 @@ import logo from '../../assets/logo.png';
 import { AuthContext } from '../../contexts/UserContext';
 import userImg from '../../assets/user/userImg.jpg';
 import { Tooltip } from "@material-tailwind/react";
+import './Header.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,66 +41,57 @@ const Header = () => {
                             </span>
                         </Link>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
-                            <li>
-                                <NavLink
-                                    to="/courses"
-                                    className="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-                                >
-                                    Courses
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/blog"
-                                    className="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-                                >
-                                    Blog
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/faq"
-                                    aria-label="Product pricing"
-                                    className="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
-                                >
-                                    FAQ
-                                </NavLink>
-                            </li>
+                            <NavLink
+                                to="/courses"
+                                className={`font-medium tracking-wide ${({ isActive }) => isActive ? 'active' : undefined}`}
+                            >
+                                Courses
+                            </NavLink>
+
+                            <NavLink
+                                to="/blog"
+                                className="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
+                            >
+                                Blog
+                            </NavLink>
+
+                            <NavLink
+                                to="/faq"
+                                aria-label="Product pricing"
+                                className="font-medium tracking-wide transition-colors duration-200 hover:text-teal-accent-400"
+                            >
+                                FAQ
+                            </NavLink>
                         </ul>
                     </div>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
                         {
                             user?.uid ?
-                                <>
-                                    <li className='flex gap-3'>
-                                        <NavLink to='/ProfileUpdate'>
-                                            <Tooltip content={user?.displayName ? user?.displayName : "Anonymous"}>
-                                                <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
-                                            </Tooltip>
-                                        </NavLink>
-                                        <NavLink
-                                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black rounded shadow-md bg-amber-400"
-                                        >
-                                            <button onClick={handleLogOut}>Logout</button>
-                                        </NavLink>
-                                    </li>
-                                </>
+                                <div className='flex gap-3'>
+                                    <NavLink to='/ProfileUpdate'>
+                                        <Tooltip content={user?.displayName ? user?.displayName : "Anonymous"}>
+                                            <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
+                                        </Tooltip>
+                                    </NavLink>
+                                    <Link
+                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black rounded shadow-md bg-amber-400"
+                                    >
+                                        <button onClick={handleLogOut}>Logout</button>
+                                    </Link>
+                                </div>
+
                                 :
-                                <>
-                                    <li>
-                                        <NavLink
-                                            to="/login"
-                                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide rounded shadow-md bg-amber-400 text-black"
-                                        >
-                                            Login
-                                        </NavLink>
-                                    </li>
-                                </>
+                                <NavLink
+                                    to="/login"
+                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide rounded shadow-md bg-amber-400 text-black"
+                                >
+                                    Login
+                                </NavLink>
                         }
 
                         <li className='flex items-center gap-2'>
-                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-16 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
-                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-8' : ''}`}></span>
+                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-14 h-8 relative bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
+                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-6' : ''}`}></span>
                             </div>
                             <span className='w-10'>
                                 {
@@ -163,59 +155,52 @@ const Header = () => {
                                     </div>
                                     <nav>
                                         <ul className={`text-center sm:text-start space-y-4 pl-6 ${isSelected ? 'text-gray-100' : 'text-gray-800'}`}>
-                                            <li>
+                                            <div>
                                                 <NavLink
                                                     to="/courses"
                                                     className="font-medium tracking-wide"
                                                 >
                                                     Courses
                                                 </NavLink>
-                                            </li>
-                                            <li>
+                                            </div>
+                                            <div>
                                                 <NavLink
                                                     to="/blog"
                                                     className="font-medium tracking-wide"
                                                 >
                                                     Blog
                                                 </NavLink>
-                                            </li>
-                                            <li>
+                                            </div>
+                                            <div>
                                                 <NavLink
                                                     to="/faq"
                                                     className="font-medium tracking-wide"
                                                 >
                                                     FAQ
                                                 </NavLink>
-                                            </li>
-
-                                            <li className='flex justify-center sm:justify-start'>
+                                            </div>
+                                            <div className='flex justify-center sm:justify-start'>
                                                 {
                                                     user?.uid ?
-                                                        <>
-                                                            <li className='flex items-center gap-2'>
-                                                                <NavLink to='/profile'>
-                                                                    <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
-                                                                </NavLink>
-                                                                <NavLink
-                                                                    className="font-medium px-3 py-2 rounded-md tracking-wide bg-amber-400"
-                                                                >
-                                                                    <button onClick={handleLogOut}>Logout</button>
-                                                                </NavLink>
-                                                            </li>
-                                                        </>
+                                                        <div className='flex items-center gap-2'>
+                                                            <NavLink to='/profile'>
+                                                                <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
+                                                            </NavLink>
+                                                            <Link
+                                                                className="font-medium px-3 py-2 rounded-md tracking-wide bg-amber-400"
+                                                            >
+                                                                <button onClick={handleLogOut}>Logout</button>
+                                                            </Link>
+                                                        </div>
                                                         :
-                                                        <>
-                                                            <li>
-                                                                <NavLink
-                                                                    to="/login"
-                                                                    className="font-medium tracking-wide shadow-md px-3 py-2 rounded bg-amber-400 text-black"
-                                                                >
-                                                                    Login
-                                                                </NavLink>
-                                                            </li>
-                                                        </>
+                                                        <NavLink
+                                                            to="/login"
+                                                            className="font-medium tracking-wide shadow-md px-3 py-2 rounded bg-amber-400 text-black"
+                                                        >
+                                                            Login
+                                                        </NavLink>
                                                 }
-                                            </li>
+                                            </div>
                                             <div className='flex sm:justify-start justify-center pt-2 pb-4 items-center gap-2'>
                                                 <div onClick={() => setIsSelected(!isSelected)} className={`flex w-16 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
                                                     <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-8' : ''}`}></span>
@@ -234,7 +219,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
