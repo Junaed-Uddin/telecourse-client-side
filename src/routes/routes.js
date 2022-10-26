@@ -11,11 +11,13 @@ import SingleCourse from "../pages/SingleCourse";
 import Checkout from "../pages/Checkout";
 import ForgotPassword from "../pages/ForgotPassword";
 import PrivateRouter from "./PrivateRouter";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
