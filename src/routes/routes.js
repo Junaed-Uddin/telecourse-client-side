@@ -12,6 +12,7 @@ import Checkout from "../pages/Checkout";
 import ForgotPassword from "../pages/ForgotPassword";
 import PrivateRouter from "./PrivateRouter";
 import ErrorPage from "../pages/ErrorPage";
+import ProfileUpdate from "../pages/ProfileUpdate";
 
 export const router = createBrowserRouter([
     {
@@ -67,6 +68,10 @@ export const router = createBrowserRouter([
             {
                 path: 'forgotPassword',
                 element: <ForgotPassword></ForgotPassword>
+            },
+            {
+                path: 'profileUpdate',
+                element: <ProfileUpdate></ProfileUpdate>
             },
             {
                 path: '/checkout/:id',

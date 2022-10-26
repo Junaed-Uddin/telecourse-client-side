@@ -72,7 +72,7 @@ const Header = () => {
                             user?.uid ?
                                 <>
                                     <li className='flex gap-3'>
-                                        <NavLink to='/profile'>
+                                        <NavLink to='/profileUpdate'>
                                             <Tooltip content={user?.displayName ? user?.displayName : "Anonymous"}>
                                                 <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
                                             </Tooltip>
