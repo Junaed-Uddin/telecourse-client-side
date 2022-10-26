@@ -152,7 +152,6 @@ const Header = () => {
                                                 className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                                                 onClick={() => setIsMenuOpen(false)}
                                             >
-                                            >
                                                 <svg className={`w-5 ${isSelected ? 'text-gray-100' : 'text-gray-800'}`} viewBox="0 0 24 24">
                                                     <path
                                                         fill="currentColor"
