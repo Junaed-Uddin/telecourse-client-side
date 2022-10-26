@@ -3,8 +3,13 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../contexts/UserContext';
 
 const PrivateRouter = ({ children }) => {
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
     const location = useLocation();
+    if (loading) {
+        return <div className='flex justify-center mt-10'>
+            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-indigo-400"></div>
+        </div>
+    }
 
     if (!user) {
         return <Navigate to='/login' state={{ from: location }} replace></Navigate>

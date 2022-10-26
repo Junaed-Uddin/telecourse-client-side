@@ -10,41 +10,52 @@ const auth = getAuth(app);
 export const AuthContext = createContext();
 
 const UserContext = ({ children }) => {
-    const [user, setUser] = useState('hello');
+    const [user, setUser] = useState('');
+    const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
     const userEmailAndPassword = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const profileUpdate = (name, photo) => {
+        setLoading(true);
         return updateProfile(auth.currentUser, name, photo);
     }
 
     const emailVerify = () => {
+        setLoading(true);
         return sendEmailVerification(auth.currentUser);
     }
 
     const googleSignIn = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
     const userLogin = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const userPasswordReset = (email) => {
+        setLoading(true);
         return sendPasswordResetEmail(auth, email);
     }
 
     const userSignOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log(currentUser);
-            setUser(currentUser);
+            if (currentUser === null || currentUser?.emailVerified) {
+                setUser(currentUser);
+                console.log(currentUser);
+            }
+            setLoading(false);
         })
 
         return () => {
@@ -54,6 +65,7 @@ const UserContext = ({ children }) => {
 
     const authInfo = {
         user,
+        loading,
         userEmailAndPassword,
         profileUpdate,
         emailVerify,

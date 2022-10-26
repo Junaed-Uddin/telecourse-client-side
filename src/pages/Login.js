@@ -21,8 +21,13 @@ const Login = () => {
                 const user = res.user;
                 console.log(user);
                 form.reset();
-                toast.success('Successfully login');
-                navigate(from, { replace: true });
+                if (user?.emailVerified) {
+                    navigate(from, { replace: true });
+                    toast.success('Successfully login');
+                }
+                else {
+                    toast.error('Email not verified. please verify your email');
+                }
             })
             .catch(err => {
                 console.error(err);
@@ -67,7 +72,7 @@ const Login = () => {
                                 id='email'
                                 placeholder='Enter Your Email Here'
                                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900'
-                                data-temp-mail-org='0'
+                                data-temp-mail-org='0' required
                             />
                         </div>
                         <div>
@@ -81,7 +86,7 @@ const Login = () => {
                                 name='password'
                                 id='password'
                                 placeholder='password'
-                                className='w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900 text-gray-900'
+                                className='w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900 text-gray-900' required
                             />
                         </div>
                     </div>
