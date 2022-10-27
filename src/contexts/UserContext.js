@@ -21,7 +21,6 @@ const UserContext = ({ children }) => {
     }
 
     const profileUpdate = (name, photo) => {
-        setLoading(true);
         return updateProfile(auth.currentUser, name, photo);
     }
 

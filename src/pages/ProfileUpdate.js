@@ -17,7 +17,7 @@ const ProfileUpdate = () => {
             displayName: name, photoURL: photoUrlRef.current.value
         })
             .then(() => {
-                toast.success('Profile Updated');
+                toast.success('Profile Updated. Please Reload the page');
             })
             .catch(error => {
                 console.error(error);
@@ -38,7 +38,7 @@ const ProfileUpdate = () => {
                 <div className="p-5 shadow-md border-t-2 border-amber-400 mt-8 lg:ml-10 mx-2">
                     <div className='divide-y-2'>
                         <div className='max-w-lg flex justify-center'>
-                            <img className='rounded-md md:w-72 md:h-36 object-cover object-top' src={user?.photoURL} alt="" />
+                            <img className='rounded-md md:w-52 md:h-36 object-cover object-center' src={user?.photoURL} alt="" />
                         </div>
                         <p className='mt-8 py-2 sm:mt-5 flex flex-wrap items-center gap-2'><FaUserTie className='text-amber-600'></FaUserTie> Name: <span className='font-semibold'>{user?.displayName}</span></p>
                         <p className='mt-8 py-2 sm:mt-5 flex flex-wrap items-center gap-2'><FaMailBulk className='text-amber-600'></FaMailBulk> Email: <span className='font-semibold'>{user?.email}</span></p>
