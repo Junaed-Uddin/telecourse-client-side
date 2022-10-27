@@ -204,16 +204,18 @@ const Header = () => {
                                                         </NavLink>
                                                 }
                                             </div>
-                                            <div className='flex sm:justify-start justify-center pt-2 pb-4 items-center gap-2'>
-                                                <div onClick={() => setIsSelected(!isSelected)} className={`flex w-16 h-8 bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
-                                                    <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-8' : ''}`}></span>
-                                                </div>
+                                            <label htmlFor="Toggle2" className="pt-2 pb-4 inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+                                                <span className="relative">
+                                                    <input onClick={() => setIsSelected(!isSelected)} id="Toggle2" type="checkbox" className="hidden peer" />
+                                                    <div className={`w-10 h-6 rounded-full shadow-inner   ${isSelected ? 'peer-checked:dark:bg-amber-500' : 'dark:bg-gray-400'}`}></div>
+                                                    <div className={`absolute inset-y-0  w-4 h-4 m-1 rounded-full shadow  dark:bg-gray-800 ${isSelected ? 'peer-checked:right-0 peer-checked:left-auto' : 'left-0'}`}></div>
+                                                </span>
                                                 <span className='w-10'>
                                                     {
-                                                        isSelected ? <span>Dark</span> : <span>Light</span>
+                                                        isSelected ? <span className='text-white'>Dark</span> : <span className='text-black'>Light</span>
                                                     }
                                                 </span>
-                                            </div>
+                                            </label>
                                         </ul>
                                     </nav>
                                 </div>
