@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 import { useEffect } from 'react';
 
@@ -13,6 +13,7 @@ const UserContext = ({ children }) => {
     const [user, setUser] = useState('');
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const userEmailAndPassword = (email, password) => {
         setLoading(true);
@@ -44,6 +45,10 @@ const UserContext = ({ children }) => {
         return sendPasswordResetEmail(auth, email);
     }
 
+    const githubLogin = () => {
+        return signInWithPopup(auth, githubProvider);
+    }
+
     const userSignOut = () => {
         setLoading(true);
         return signOut(auth);
@@ -51,11 +56,8 @@ const UserContext = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            // change state after verifying user email
-            if (currentUser === null || currentUser?.emailVerified) {
-                setUser(currentUser);
-                console.log(currentUser);
-            }
+            setUser(currentUser);
+            console.log(currentUser);
             setLoading(false);
         })
 
@@ -73,6 +75,7 @@ const UserContext = ({ children }) => {
         googleSignIn,
         userPasswordReset,
         userLogin,
+        githubLogin,
         userSignOut
     }
 

@@ -69,7 +69,7 @@ const Header = () => {
                             user?.uid ?
                                 <div className='flex gap-3'>
                                     <NavLink to='/ProfileUpdate'>
-                                        <Tooltip content={user?.displayName ? user?.displayName : "Anonymous"}>
+                                        <Tooltip className='text-amber-500 font-bold' content={user?.displayName ? user?.displayName : "Anonymous"} placement="bottom">
                                             <img className='rounded-full border' style={{ height: '4   8px', width: '50px' }} src={user?.photoURL ? user.photoURL : userImg} referrerPolicy='no-referrer' alt="" />
                                         </Tooltip>
                                     </NavLink>
@@ -81,12 +81,12 @@ const Header = () => {
                                 </div>
 
                                 :
-                                <NavLink
+                                <Link
                                     to="/login"
                                     className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide rounded shadow-md bg-amber-400 text-black"
                                 >
                                     Login
-                                </NavLink>
+                                </Link>
                         }
 
                         <li className='inline-flex items-center gap-2 cursor-pointer'>
