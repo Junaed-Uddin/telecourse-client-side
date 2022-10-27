@@ -38,7 +38,7 @@ const Register = () => {
                         toast.success('Email Verification sent to your email');
                     })
 
-                navigate('/');
+                navigate('/login');
             })
             .catch(error => {
                 console.error(error)

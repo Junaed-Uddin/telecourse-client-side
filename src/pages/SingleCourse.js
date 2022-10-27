@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { FaBookReader, FaCertificate, FaClock, FaFileContract, FaIdBadge, FaLanguage, FaLevelUpAlt, FaLock, FaMoneyBill, FaQuestion, FaRegFilePdf, FaStar, } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import PdfCourse from './PdfCourse';
 
 const SingleCourse = () => {
     const course = useLoaderData();
@@ -19,8 +21,10 @@ const SingleCourse = () => {
                 <div className='flex flex-col-reverse w-3/4 mx-auto sm:flex-row justify-between items-center'>
                     <h2 className='text-4xl text-amber-400 text-start font-semibold mb-8'>{course_name}</h2>
                     <div className='flex items-center gap-2 mb-8'>
-                        <FaRegFilePdf size={30}></FaRegFilePdf>
-                        <span>Get the PDF</span>
+                        <span className='mb-1.5 text-base font-bold'>Get the PDF</span>
+                        <PDFDownloadLink document={<PdfCourse course={course} />} filename="Course Details">
+                            {({ loading }) => (loading ? <button>Loading Document...</button> : <button><FaRegFilePdf size={20}></FaRegFilePdf></button>)}
+                        </PDFDownloadLink>
                     </div>
                 </div>
                 <div className="container px-3 sm:px-0 gap-5 md:flex justify-center mx-auto">

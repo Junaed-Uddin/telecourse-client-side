@@ -14,6 +14,7 @@ import PrivateRouter from "./PrivateRouter";
 import ErrorPage from "../pages/ErrorPage";
 import ProfileUpdate from "../pages/ProfileUpdate";
 
+
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -79,7 +80,7 @@ export const router = createBrowserRouter([
                     return fetch(`https://telecourse-server.vercel.app/course/${params.id}`);
                 },
                 element: <PrivateRouter><Checkout></Checkout></PrivateRouter> 
-            },
+            }
         ]
     }
 ]) 
