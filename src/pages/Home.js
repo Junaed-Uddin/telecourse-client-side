@@ -24,16 +24,15 @@ const Home = () => {
                 </div>
                 <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
                     <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-                        <h2 className="mb-5 font-sans text-3xl font-bold text-gray-900 sm:text-5xl leading-loose">
-                            Take The First Step To Knowledge {''}
-                            <span className='my-2 text-violet-600'>With Us</span>
+                        <h2 className='text-3xl sm:text-5xl font-semibold mb-5'>
+                            Take The First Step To Knowledge <span className='text-violet-600'>With Us</span>
                         </h2>
                         <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-                        Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.
+                            Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.
                         </p>
                         <div className="flex items-center">
                             <Link
-                                to="/"
+                                to="/courses"
                                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-violet-600 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                             >
                                 Get started
@@ -154,6 +153,18 @@ const Home = () => {
                             </div>
                             <h6 className="mb-2 font-semibold text-lg text-center">Docker</h6>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* form email */}
+            <div className="w-full dark:bg-gray-800">
+                <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-14">
+                    <h1 className="text-4xl sm:text-5xl antialiased font-semibold leading-none text-center dark:text-gray-100">Get Our Updates</h1>
+                    <p className="pt-4 pb-5 text-xl antialiased text-center dark:text-gray-100">Find out about events and other news</p>
+                    <div className="flex flex-row">
+                        <input type="text" placeholder="example@email.com" className="w-3/5 p-3 rounded-l-lg sm:w-2/3" />
+                        <button type="button" className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 dark:bg-blue-400 dark:text-gray-900">Subscribe</button>
                     </div>
                 </div>
             </div>
