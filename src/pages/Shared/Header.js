@@ -89,16 +89,18 @@ const Header = () => {
                                 </Link>
                         }
 
-                        <li className='inline-flex items-center gap-2 cursor-pointer'>
-                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-14 h-8 relative bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
-                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-6' : ''}`}></span>
-                            </div>
+                        <label htmlFor="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+                            <span className="relative">
+                                <input onClick={() => setIsSelected(!isSelected)} id="Toggle1" type="checkbox" className="hidden peer" />
+                                <div className={`w-10 h-6 rounded-full shadow-inner   ${isSelected ? 'peer-checked:dark:bg-amber-500' : 'dark:bg-gray-400'}`}></div>
+                                <div className={`absolute inset-y-0  w-4 h-4 m-1 rounded-full shadow  dark:bg-gray-800 ${isSelected ? 'peer-checked:right-0 peer-checked:left-auto' : 'left-0'}`}></div>
+                            </span>
                             <span className='w-10'>
                                 {
-                                    isSelected ? <span>Dark</span> : <span>Light</span>
+                                    isSelected ? <span className='text-white'>Dark</span> : <span className='text-black'>Light</span>
                                 }
                             </span>
-                        </li>
+                        </label>
 
                     </ul>
                     <div className="lg:hidden text-black text-start z-20">

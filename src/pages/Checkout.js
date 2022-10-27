@@ -32,7 +32,7 @@ const Checkout = () => {
                 <div className="p-5 shadow-md border-t-2 border-amber-400 mt-8 lg:ml-10 mx-2    ">
                     <div className='divide-y-2'>
                         <div className='max-w-lg'>
-                            <img className='rounded-md w-full lg:w-72 object-cover' src={thumbnail} alt="" />
+                            <img className='rounded-md w-full lg:w-80 object-cover' src={thumbnail} alt="" />
                         </div>
                         <p className='mt-8 py-2 sm:mt-5 flex flex-wrap items-center gap-2'><FaDiscourse className='text-amber-600'></FaDiscourse> Name: <span className='font-semibold'>{course_name}</span></p>
 
