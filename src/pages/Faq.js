@@ -18,6 +18,10 @@ const Faq = () => {
                         <summary className="px-4 py-6 focus:outline-none focus-visible:ring-blue-400">What is included in the course?</summary>
                         <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-700">In short, from Django, Html, CSS to bootstrap, JavaScript, Git, ES6, REST API, server, JSON are there. At the same time, there is a system for making complete websites with React, the framework that currently has the most jobs.</p>
                     </details>
+                    <details className="w-full border rounded-lg">
+                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-blue-400">What is the guarantee of getting a job after completing this course?</summary>
+                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-700">But we do not guarantee the job. We say that if you finish the main course well on time, you will get job, interview related special training. Work hard there and our four job placement team members will forward your CV/resume to various companies.</p>
+                    </details>
                 </div>
             </div>
         </section>
