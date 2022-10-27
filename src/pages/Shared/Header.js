@@ -89,9 +89,9 @@ const Header = () => {
                                 </NavLink>
                         }
 
-                        <li className='flex items-center gap-2'>
-                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-16 h-8 relative bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
-                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-8' : ''}`}></span>
+                        <li className='inline-flex items-center gap-2 cursor-pointer'>
+                            <div onClick={() => setIsSelected(!isSelected)} className={`flex w-14 h-8 relative bg-amber-500 rounded-full ${isSelected ? 'h-8 w-8 bg-amber-500 rounded-full' : 'h-8 w-8 bg-gray-400 rounded-full'}`}>
+                                <span className={`h-8 w-8 bg-white border rounded-full ${isSelected ? 'ml-6' : ''}`}></span>
                             </div>
                             <span className='w-10'>
                                 {
@@ -99,6 +99,7 @@ const Header = () => {
                                 }
                             </span>
                         </li>
+
                     </ul>
                     <div className="lg:hidden text-black text-start z-20">
                         <button
