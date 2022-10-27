@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import banner from '../assets/slider/banner.jpg'
+import { FaClock, FaDollarSign, FaMoneyBill, FaStar } from 'react-icons/fa';
 
 const Home = () => {
     return (
@@ -156,6 +157,245 @@ const Home = () => {
                             </div>
                             <h6 className="mb-2 font-semibold text-lg text-center">Docker</h6>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Top featured courses */}
+            <div className="bg-gray-100">
+                <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                    <div className='text-2xl mb-6 font-bold text-gray-800 relative z-10'>
+                        <h2>Top Featured Courses</h2>
+                    </div>
+                    <div className="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
+                        <svg
+                            viewBox="0 0 88 88"
+                            className="w-full max-w-screen-xl text-indigo-100"
+                        >
+                            <circle fill="currentColor" cx="44" cy="44" r="15.5" />
+                            <circle
+                                fillOpacity="0.2"
+                                fill="currentColor"
+                                cx="44"
+                                cy="44"
+                                r="44"
+                            />
+                            <circle
+                                fillOpacity="0.2"
+                                fill="currentColor"
+                                cx="44"
+                                cy="44"
+                                r="37.5"
+                            />
+                            <circle
+                                fillOpacity="0.3"
+                                fill="currentColor"
+                                cx="44"
+                                cy="44"
+                                r="29.5"
+                            />
+                            <circle
+                                fillOpacity="0.3"
+                                fill="currentColor"
+                                cx="44"
+                                cy="44"
+                                r="22.5"
+                            />
+                        </svg>
+                    </div>
+                    <div className="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://canvasjs.com/wp-content/uploads/images/gallery/other-technologies/angular-logo.png" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center">Angular Crash Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.6</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>12hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>45$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://i1.wp.com/yeisonpx.com/wp-content/uploads/2020/10/csharp_api.jpg?fit=668%2C376&ssl=1" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center">.NET Core Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.7</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>15hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>75$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-36' src="https://www.jdrf.org/wp-content/uploads/2020/12/AWS-logo-2.jpg" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center">AWS Cloud Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.5</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>14hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>50$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+                        
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://t4.ftcdn.net/jpg/04/63/81/91/360_F_463819155_TZMqYan7kzmKGcMEG3Qlj7JkSouDpjyk.jpg" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center">GoLang Crash Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.8</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>20hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>80$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://usamagzine.com/wp-content/uploads/2022/09/Data-Structures-In-Java-.jpeg" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center"> Data Structure Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.7</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>22hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>90$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://miro.medium.com/max/900/1*OrjCKmou1jT4It5so5gvOA.jpeg" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center"> Vue Crash Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.8</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>21hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>40$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_f0b606abb6d19089febc9faeeba5bc05/nodejs-development-services.png" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center"> Node Crash Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.3</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>25hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>90$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+
+                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                            <div className="px-5 py-4">
+                                <div className="flex items-center justify-center h-40 mb-4">
+                                    <img className='w-52 h-28' src="https://www.simplilearn.com/ice9/free_resources_article_thumb/React_Native_Tutorial.jpg" alt="" />
+                                </div>
+                                <p className="mb-2 font-bold text-lg text-center"> React Native Course</p>
+                                <div className='pt-2 flex justify-between'>
+                                    <div className='flex items-center gap-1'>
+                                        <FaStar className='text-amber-500'></FaStar>
+                                        <span className='font-semibold'>4.1</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaClock className='text-amber-500'></FaClock>
+                                        <span className='font-semibold'>13hr</span>
+                                    </div>
+                                    <div className='flex items-center gap-1'>
+                                        <FaMoneyBill className='text-amber-500'></FaMoneyBill>
+                                        <span className='font-semibold'>80$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
+                        </div>
+                        
                     </div>
                 </div>
             </div>
