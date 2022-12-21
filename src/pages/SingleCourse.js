@@ -15,7 +15,7 @@ const SingleCourse = () => {
     }, []);
 
     return (
-        <div className='w-full'>
+        <div className='w-full' data-aos="fade-up" data-aos-duration="1200">
             <div ref={topContainer} />
             <section className="mt-10 dark:text-gray-900">
                 <div className='flex flex-col-reverse w-3/4 mx-auto sm:flex-row justify-between items-center'>
@@ -123,7 +123,7 @@ const SingleCourse = () => {
                 </div>
             </section>
 
-            <div className='sm:flex justify-center gap-5 pl-4 my-10 px-2'>
+            <div className='sm:flex justify-center gap-5 pl-4 my-10 px-2' data-aos="fade-up" data-aos-duration="1200">
                 <section className="container dark:bg-gray-800 sm:max-w-4xl p-10 dark:text-gray-300 rounded-md">
                     <p className='my-4 text-3xl text-amber-400 font-semibold'>Course Description</p>
                     <div className='text-lg text-gray-200'>

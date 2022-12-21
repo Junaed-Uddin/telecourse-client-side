@@ -10,7 +10,7 @@ const LeftNavbar = () => {
             .then(data => setCategories(data));
     }, [])
     return (
-        <div className="flex flex-col h-full p-3 rounded-lg w-full mx-2 sm:w-72 border-t-4 border-amber-400 shadow-xl dark:text-gray-900 sticky top-5">
+        <div className="flex flex-col h-full p-3 rounded-lg w-full mx-2 sm:w-72 border-t-4 border-amber-400 shadow-xl dark:text-gray-900 sticky top-5" data-aos="fade-right" data-aos-duration="1200">
             <div className="space-y-3">
                 <div className="flex items-center justify-between">
                     <h2 className='text-lg'>Categories</h2>

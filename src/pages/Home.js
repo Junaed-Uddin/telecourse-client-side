@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import banner from '../assets/slider/banner.jpg'
-import { FaClock, FaDollarSign, FaMoneyBill, FaStar } from 'react-icons/fa';
+import { FaClock, FaMoneyBill, FaStar } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <div>
+        <>
             {/* banner section */}
             <div className="relative flex py-16 flex-col-reverse lg:pt-5 lg:flex-col lg:pb-0">
-                <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+                <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0" data-aos="fade-left">
                     <svg
                         className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
                         viewBox="0 0 100 100"
@@ -23,7 +23,7 @@ const Home = () => {
                         alt=""
                     />
                 </div>
-                <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+                <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl" data-aos="fade-right">
                     <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
                         <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none text-center sm:text-start">
                             Take The First Step
@@ -54,15 +54,15 @@ const Home = () => {
             </div>
 
             {/* features section */}
-            <section className="dark:bg-gray-800 dark:text-gray-100">
+            <section className="dark:bg-gray-800 dark:text-gray-100" data-aos="fade-up" data-aos-duration="1800">
                 <div className="container max-w-6xl px-4 py-12 mx-auto">
                     <div className="grid gap-4 mx-4 sm:grid-cols-12">
-                        <div className="col-span-12 sm:col-span-3">
+                        <div className="col-span-12 sm:col-span-3" data-aos="fade-left" data-aos-duration="2400">
                             <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-3 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-blue-400">
                                 <h3 className="text-3xl font-semibold">Platform Features</h3>
                             </div>
                         </div>
-                        <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+                        <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9" data-aos="fade-right" data-aos-duration="2400">
                             <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
                                 <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-blue-400">
                                     <h3 className="text-xl font-semibold tracking-wide">Quality Content</h3>
@@ -83,7 +83,7 @@ const Home = () => {
             </section>
 
             {/* what will you learn section */}
-            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24">
+            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-24" data-aos="fade-up" data-aos-duration="2500">
                 <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                     <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                         <span className="relative inline-block">
@@ -118,7 +118,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="grid gap-4 row-gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                    <div className="flex shadow-xl justify-center py-5 border rounded-xl">
+                    <div className="flex shadow-xl justify-center py-5 border rounded-xl" data-aos="fade-right" data-aos-duration="1500">
                         <div>
                             <div className="flex items-center justify-center w-24 h-24 mb-2 rounded-full bg-indigo-50">
                                 <img src="https://masterstudy.stylemixthemes.com/tech/wp-content/uploads/sites/21/2021/12/angular.png" alt="" />
@@ -126,7 +126,7 @@ const Home = () => {
                             <h6 className="mb-2 font-semibold text-lg text-center">Angular</h6>
                         </div>
                     </div>
-                    <div className="flex shadow-xl justify-center py-5 border rounded-xl">
+                    <div className="flex shadow-xl justify-center py-5 border rounded-xl" data-aos="fade-up" data-aos-duration="1500">
                         <div>
                             <div className="flex items-center justify-center w-24 h-24 mb-2 rounded-full bg-indigo-50">
                                 <img src="https://masterstudy.stylemixthemes.com/tech/wp-content/uploads/sites/21/2021/12/python.png" alt="" />
@@ -134,7 +134,7 @@ const Home = () => {
                             <h6 className="mb-2 font-semibold text-lg text-center">Python</h6>
                         </div>
                     </div>
-                    <div className="flex shadow-xl justify-center py-5 border rounded-xl">
+                    <div className="flex shadow-xl justify-center py-5 border rounded-xl" data-aos="fade-up" data-aos-duration="1500">
                         <div>
                             <div className="flex items-center justify-center w-24 h-24 mb-2 rounded-full bg-indigo-50">
                                 <img src="https://masterstudy.stylemixthemes.com/tech/wp-content/uploads/sites/21/2021/12/nodejs.png" alt="" />
@@ -142,7 +142,7 @@ const Home = () => {
                             <h6 className="mb-2 font-semibold text-lg text-center">Node</h6>
                         </div>
                     </div>
-                    <div className="flex shadow-xl justify-center py-5 border rounded-xl">
+                    <div className="flex shadow-xl justify-center py-5 border rounded-xl" data-aos="fade-up" data-aos-duration="1500">
                         <div>
                             <div className="flex items-center justify-center w-24 h-24 mb-2 rounded-full bg-indigo-50">
                                 <img src="https://masterstudy.stylemixthemes.com/tech/wp-content/uploads/sites/21/2021/12/reactjs.png" alt="" />
@@ -150,7 +150,7 @@ const Home = () => {
                             <h6 className="mb-2 font-semibold text-lg text-center">React</h6>
                         </div>
                     </div>
-                    <div className="flex shadow-xl justify-center py-5 border rounded-xl">
+                    <div className="flex shadow-xl justify-center py-5 border rounded-xl" data-aos="fade-left" data-aos-duration="1500">
                         <div>
                             <div className="flex items-center justify-center w-24 h-24 mb-2 rounded-full bg-indigo-50">
                                 <img src="https://masterstudy.stylemixthemes.com/tech/wp-content/uploads/sites/21/2021/12/docker.png" alt="" />
@@ -162,7 +162,7 @@ const Home = () => {
             </div>
 
             {/* Top featured courses */}
-            <div className="bg-gray-100">
+            <div className="bg-gray-100" data-aos="fade-up" data-aos-duration="2500">
                 <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className='text-2xl mb-6 font-bold text-gray-800 relative z-10'>
                         <h2>Top Featured Courses</h2>
@@ -275,7 +275,7 @@ const Home = () => {
                             </div>
                             <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
                         </div>
-                        
+
                         <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
                             <div className="px-5 py-4">
                                 <div className="flex items-center justify-center h-40 mb-4">
@@ -395,13 +395,13 @@ const Home = () => {
                             </div>
                             <div className="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100" />
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
 
             {/* form email */}
-            <div className="w-full dark:bg-gray-100 ">
+            <div className="w-full dark:bg-gray-100 " data-aos="zoom-in-up" data-aos-duration="1400">
                 <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-14">
                     <h1 className="text-4xl sm:text-5xl antialiased font-semibold leading-none text-center dark:text-gray-800">Get Our Updates</h1>
                     <p className="pt-4 pb-5 text-xl text-gray-900 antialiased text-center">Find out about events and other news</p>
@@ -411,7 +411,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

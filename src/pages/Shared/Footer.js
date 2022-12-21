@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="lg:w-1/3">
                     <Link href="#" className="flex justify-center lg:justify-start">
                         <div className="flex items-center justify-center w-28 object-cover rounded-full">
-                           <img src={logo} alt="" />
+                            <img src={logo} alt="" />
                         </div>
                         <span className="self-center text-2xl font-semibold">TeleCourse</span>
                     </Link>

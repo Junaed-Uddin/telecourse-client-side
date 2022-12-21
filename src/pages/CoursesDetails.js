@@ -6,8 +6,8 @@ const CoursesDetails = ({ allCourse }) => {
     const { course_id, course_name, category, description, rating, duration, thumbnail, state, lectures } = allCourse;
 
     return (
-        <div className="w-full">
-            <div className="space-y-2 border w-full rounded-md shadow-xl mt-5 sm:mt-0 h-full">
+        <div className="w-full" data-aos="fade-up" data-aos-duration="1200">
+            <div className="space-y-2 border w-full rounded-md shadow-xl mt-5 sm:mt-0 h-full" data-aos="fade-up" data-aos-duration="1200">
                 <div className="space-y-2 relative">
                     <img src={thumbnail} alt="" className="block border object-top w-full rounded-md h-52" />
                     <div className="flex flex-wrap justify-between pr-4 items-center text-base dark:text-gray-400 pl-4 font-semibold">
